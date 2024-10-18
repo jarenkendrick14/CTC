@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cut the Cord - About Us</title>
+
+</head>
+<style>
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-color: #4a0080;
+    --secondary-color: #240259;
+    --accent-color: #8a2be2;
+    --text-color: #ffffff;
+}
+
+/* Base Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: rgba(45, 0, 89, 0.8);
+    padding: 0.5rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+}
+
+.logo {
+    height: 30px;
+    width: auto;
+    margin-right: 1rem;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Main Content Area */
+main {
+    padding: 6rem 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Typography */
+h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* About Section Styles */
+.about-content {
+    background-color: rgba(74, 0, 128, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.about-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(138, 43, 226, 0.5);
+}
+
+.about-logo {
+    flex: 0 0 200px;
+    margin-right: 2rem;
+}
+
+.about-logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background-color: rgba(74, 0, 128, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Submit Button Styles */
+.submit-btn {
+    background-color: var(--accent-color);
+    border: none;
+    color: var(--text-color);
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #9d3ff3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(45, 0, 89, 0.8);
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    /* About Section Mobile Styles */
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-logo {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    /* Contact Form Mobile Styles */
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        max-width: 100%;
+    }
+
+    /* Navigation Mobile Styles */
+    .nav-content {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .logo {
+        height: 30px;
+        margin-left: 10px;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(45, 0, 89, 0.95);
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Desktop Menu Toggle Hide */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+</style>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <img src="images/logo.png" alt="Cut the Cord Logo" class="logo">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="mice.html">Mice</a></li>
+                <li><a href="keyboards.html">Keyboards</a></li>
+                <li><a href="headphones.html">Headphones</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <h1>About Cut the Cord</h1>
+        <div class="about-content">
+            <div class="about-logo">
+                <img src="images/logo-colossal.png" alt="Cut the Cord Logo">
+            </div>
+            <div class="about-text">
+                <h2>Our Mission</h2>
+                <p>Technology is ever-evolving, and we're here to enlighten you with the latest and most budget-friendly, high-quality devices as we scour new products each week. Gone are the days of needing dongles and cables hanging around, turning our tidy spaces into what looks like a spaghetti monster's fever dream. To help you out, we have selected the best wireless gadgets. The best options for every need, no endless scrolling.</p>
+                <p>Cut the Cords is here to free you from tussling cables and cords. Almost the Wire Cutters of your locality sans getting arrested for destroying public property. These three categories cover the full spectrum of your wireless tech needs: from typing to navigating and enjoying high-quality audio.</p>
+                <p>Whether you are a tech guru who basically dreams in 0s and 1s, or one of those people who still believes that Bluetooth is a dental condition, Cut the Cords has to be your cordless paradise! Here to guide you through the wireless woods without tripping up on your virtual shoelaces.</p>
+                <p>With that said, do yourself a favor, stop by and get involved in the wireless revolution. Friends do not let friends use wires, after all.</p>
+            </div>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright © 2024. Jaren Kendrick Yambao. All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+    
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navContent = document.querySelector('.nav-content');
+            const menuToggle = document.querySelector('.menu-toggle');
+            if (!navContent.contains(event.target) || event.target === menuToggle) {
+                document.querySelector('nav ul').classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
